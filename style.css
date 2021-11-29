@@ -63,11 +63,13 @@ H1{
     border-top:0;
 }
 
-
-
 .container{
     display: grid;
    
+}
+
+article{
+    background-color: cadetblue;
 }
 
 footer{
