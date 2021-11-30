@@ -11,7 +11,7 @@ const disegnaTutto = (listaUtenti) => {
         const user = listaUtenti[index];
         //console.log(user); 
         
-        schede = schede+ 
+        schede = schede+ //schede=+
         `
         <article>
         <h3>${user.username}</h3>

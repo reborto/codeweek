@@ -1,13 +1,112 @@
 import { API, render } from './utils.js';
-import{disegnaTutto} from './view.js';
+import { disegnaTutto } from './view.js';
 
-document.addEventListener("DOMContentLoaded", ()=>{
+//renderizza tutto il json
+document.addEventListener("DOMContentLoaded", () => {
     fetch(API)
-    .then((response)=>response.json())
-    .then((data)=> { 
-        console.log(data); 
-        disegnaTutto(data);
-    }) 
+        .then((response) => response.json())
+        .then((data) => {
+            // console.log(data);
+            disegnaTutto(data);
+        })
 });
+
+function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
+
+    // ci ricaviamo i codici ascii delle due lettere in input
+    const startAscii = letteraIniziale.toLowerCase().charCodeAt(0);
+    const endAscii = letteraFinale.toLowerCase().charCodeAt(0);
+
+    // vediamo se il nome in input inizia (startsWith) con una lettera che sta nell'intervallo specificato
+    let iniziaConLettera = false;
+    for( let ascii = startAscii; ascii <= endAscii; ascii++ ) {
+        let letter = String.fromCharCode(ascii);
+        if( nome.startsWith(letter)) {
+            iniziaConLettera = true;
+            break;
+        }
+    }
+
+    return iniziaConLettera;
+}
+
+function filtro(listaUtenti, letteraIniziale, letteraFinale) {
+    const listaFiltrata = [];
+
+    for(let i =0; i < listaUtenti.lenght; i++) {
+        let user = listaUtenti[i];
+        if( nomeCominciaCon(user.name, letteraIniziale, letteraFinale ) ) {
+            listaFiltrata.push(user);
+        }
+    }
+
+    console.log(listaFiltrata)
+    return listaFiltrata;
+}
+const btnAE = document.querySelector('#A-E')
+function onClickBtnAE() {
+
+    fetch(API)
+    .then((response) => response.json())
+    .then( (data) => filtro(data, 'A', 'E')  )
+    .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
+    
+    // console.log(listaFiltrata)
+}
+btnAE.addEventListener('click', ()=>{
+    onClickBtnAE()
+})
+
+
+
+function onClickBtnFL() {
+    
+}
+
+function onClickBtnMZ() {
+    
+}
+
+
+
+
+
+
+
+// function filtro(data, to) {
+//     let arrayIndex;
+//     let check = false;
+
+//     for (let i of data) {
+//         if (i.name[0].toLowerCase() === to) {
+//             arrayIndex = data.indexOf(i) - 1;
+//             check = true;
+//             break
+//         } 
+
+//     }
+//     if (check === false) {
+//         let prova
+//         prova = String.fromCharCode((to.charCodeAt(to)+1));
+//         filtro(data, prova);
+//     }
+
+//     const arrayAE = [];
+
+//     for (let i = 0; arrayIndex; i++) {
+//         arrayAE.push(data[i]);
+//     }
+
+//     console.log(arrayAE)
+// }
+
+
+// console.log(letter.charCodeAt(letter))
+
+// document.addEventListener("DOMContentLoaded", ()=>{
+// fetch(API)
+
+// })
+
 
 //console.log(view);
