@@ -8,27 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
             // console.log(data);
             disegnaTutto(data);
+            
         })
 });
 
-function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
 
-    // ci ricaviamo i codici ascii delle due lettere in input
-    const startAscii = letteraIniziale.toLowerCase().charCodeAt(0);
-    const endAscii = letteraFinale.toLowerCase().charCodeAt(0);
-
-    // vediamo se il nome in input inizia (startsWith) con una lettera che sta nell'intervallo specificato
-    let iniziaConLettera = false;
-    for( let ascii = startAscii; ascii <= endAscii; ascii++ ) {
-        let letter = String.fromCharCode(ascii);
-        if( nome.startsWith(letter)) {
-            iniziaConLettera = true;
-            break;
-        }
-    }
-
-    return iniziaConLettera;
-}
 
 function filtro(listaUtenti, letteraIniziale, letteraFinale) {
     const listaFiltrata = [];
@@ -50,7 +34,6 @@ function onClickBtnAE() {
     .then((response) => response.json())
     .then( (data) => filtro(data, 'A', 'E')  )
     .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
-    
     // console.log(listaFiltrata)
 }
 btnAE.addEventListener('click', ()=>{
@@ -67,7 +50,24 @@ function onClickBtnMZ() {
     
 }
 
+function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
 
+    // ci ricaviamo i codici ascii delle due lettere in input
+    const startAscii = letteraIniziale.toLowerCase().charCodeAt(0);
+    const endAscii = letteraFinale.toLowerCase().charCodeAt(0);
+
+    // vediamo se il nome in input inizia (startsWith) con una lettera che sta nell'intervallo specificato
+    let iniziaConLettera = false;
+    for( let ascii = startAscii; ascii <= endAscii; ascii++ ) {
+        let letter = String.fromCharCode(ascii);
+        if( nome.startsWith(letter)) {
+            iniziaConLettera = true;
+            break;
+        }
+    }
+
+    return iniziaConLettera;
+}
 
 
 

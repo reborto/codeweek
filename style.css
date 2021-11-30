@@ -17,6 +17,8 @@ H1{
 
 
 .header{
+    
+
     display: grid;
     width: 230px;
     grid-template-rows: 1fr 1fr;
@@ -27,7 +29,7 @@ H1{
     grid-template-columns: 1fr 1fr 1fr;
     border-radius: 25px; 
     width: 100%;
-
+    
 
 }
 .btn button{
@@ -45,15 +47,18 @@ H1{
     border-radius: 15px 0 0 0;
     border-top:solid;
     border-left: solid;
+    font-family:'Fredoka One', cursive;
 }
 #F-L{
     border-radius: 0;  
     border-top: solid;
+    font-family:'Fredoka One', cursive;
 }
 #M-Z{
     border-radius: 0 15px 0px 0;  
     border-top:solid;
     border-right: solid;
+    font-family:'Fredoka One', cursive;
 }
 #tutti{
     border-radius: 0 0 15px 15px;
@@ -61,6 +66,7 @@ H1{
     
     border: solid;
     border-top:0;
+    font-family:'Fredoka One', cursive;
 }
 
 .container{
