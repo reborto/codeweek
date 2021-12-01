@@ -2,22 +2,22 @@ import { API, render } from './utils.js';
 import { disegnaTutto } from './view.js';
 
 //renderizza tutto il json
-document.addEventListener("DOMContentLoaded", () => {
-    fetch(API)
-        .then((response) => response.json())
-        .then((data) => {
-            // console.log(data);
-            disegnaTutto(data);
+// document.addEventListener("DOMContentLoaded", () => {
+//     fetch(API)
+//         .then((response) => response.json())
+//         .then((data) => {
+//             // console.log(data);
+//             disegnaTutto(data);
             
-        })
-});
+//         })
+// });
 
 
 
 function filtro(listaUtenti, letteraIniziale, letteraFinale) {
     const listaFiltrata = [];
 
-    for(let i =0; i < listaUtenti.lenght; i++) {
+    for(let i =0; i < listaUtenti.length; i++) {
         let user = listaUtenti[i];
         if( nomeCominciaCon(user.name, letteraIniziale, letteraFinale ) ) {
             listaFiltrata.push(user);
@@ -27,29 +27,53 @@ function filtro(listaUtenti, letteraIniziale, letteraFinale) {
     console.log(listaFiltrata)
     return listaFiltrata;
 }
-const btnAE = document.querySelector('#A-E')
+
+//bottoni
 function onClickBtnAE() {
 
     fetch(API)
     .then((response) => response.json())
     .then( (data) => filtro(data, 'A', 'E')  )
     .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
-
 }
-btnAE.addEventListener('click', ()=>{
+
+document.querySelector('#A-E').addEventListener('click', ()=>{
     onClickBtnAE()
 })
 
 
 
 function onClickBtnFL() {
-    
+    fetch(API)
+    .then((response) => response.json())
+    .then( (data) => filtro(data, 'F', 'L')  )
+    .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
 }
+document.querySelector('#F-L').addEventListener('click', ()=>{
+    onClickBtnFL()
+})
 
-function onClickBtnMZ() {
-    
+function onClickBtnMZ() {  
+    fetch(API)
+    .then((response) => response.json())
+    .then( (data) => filtro(data, 'M', 'Z')  )
+    .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
 }
+document.querySelector('#M-Z').addEventListener('click', ()=>{
+    onClickBtnMZ()
+})
 
+function onClickBtnTutti(){
+    fetch(API)
+    .then((response) => response.json())
+    
+    .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
+}
+document.querySelector('#tutti').addEventListener('click', ()=>{
+    onClickBtnTutti()
+})
+
+//funzioni
 function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
 
     // ci ricaviamo i codici ascii delle due lettere in input
@@ -60,7 +84,8 @@ function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
     let iniziaConLettera = false;
     for( let ascii = startAscii; ascii <= endAscii; ascii++ ) {
         let letter = String.fromCharCode(ascii);
-        if( nome.startsWith(letter)) {
+        
+        if( nome.toLowerCase().startsWith(letter)) {
             iniziaConLettera = true;
             break;
         }
@@ -69,6 +94,8 @@ function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
     return iniziaConLettera;
     
 }
+
+
 
 
 
