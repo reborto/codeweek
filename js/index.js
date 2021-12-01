@@ -34,7 +34,7 @@ function onClickBtnAE() {
     .then((response) => response.json())
     .then( (data) => filtro(data, 'A', 'E')  )
     .then((listaFiltrata) => disegnaTutto(listaFiltrata) );
-    // console.log(listaFiltrata)
+
 }
 btnAE.addEventListener('click', ()=>{
     onClickBtnAE()
@@ -67,6 +67,7 @@ function nomeCominciaCon(nome, letteraIniziale, letteraFinale ) {
     }
 
     return iniziaConLettera;
+    
 }
 
 

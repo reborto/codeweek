@@ -14,10 +14,13 @@ const disegnaTutto = (listaUtenti) => {
         schede = schede+ //schede=+
         `
         <article>
-        <h3>${user.username}</h3>
+        <h2><img src="graph/Risorsa 2.svg">${user.username}</h2>
         <h4>${user.name}</h4>
-        <p>${user.email}</p>
-        <p>${user.address.city}</p>
+        <p><img src="graph/Risorsa 2.svg">${user.email}</p>
+        <p>${user.address}</p>
+        <p>${user.phone}</p>
+        <p>${user.website}</p>
+        <p>${user.company}</p>
         </article>
         `;
 

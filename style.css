@@ -39,10 +39,10 @@ H1{
     
     /* border-style:outset; */
 }
-.btn button:active{
-    /* border:inset; */
-    
-}
+/* .btn button:active{
+    border:inset;
+ } */
+
 #A-E{
     border-radius: 15px 0 0 0;
     border-top:solid;
@@ -75,7 +75,14 @@ H1{
 }
 
 article{
+    
     background-color: cadetblue;
+    padding: 5px 25px;
+    margin: 25px 0;
+}
+article img{
+    height: 2%;
+    width: 2%;
 }
 
 footer{
