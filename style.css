@@ -6,34 +6,45 @@
 body{
     font-family: 'Lato', sans-serif;
     background: linear-gradient(145deg, #e6d7c0, #ffffe4);
+    min-height: 1980px;   
+    display: flex;
+    justify-content: center;
 }
-
-H1{
+main{
+    min-height: 500px;
+   
+   
+}
+/* H1{
     font-size: 4.2rem;
     font-family: 'Fredoka One', cursive;
     padding: 0 0 0 0.5rem;
-    margin: 0 0 1rem 0;
+    margin: 2rem 0 1rem 0;
     
     background:-webkit-linear-gradient(145deg, #bb9d6f, #ddc7a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-/* .h1{
-   
 } */
+
+.h1{
+   width: 20rem;
+   padding: 0 0 0 0.8rem;
+   margin: 3rem 0 2rem 0;
+   justify-content:center ;
+}
 
 .header{
 border-radius: 25px;   
- 
+/* margin: 0 0 0 1.25rem; */
+
 display: grid;
-    width: 230px;
+    width: 100%;
+    height: 3rem;
     grid-template-rows: 1fr 1fr;
 
     background: linear-gradient(145deg, #ffffe4, #e6d7c0);
     box-shadow:  13px 13px 32px #d4c6b1,
              -13px -13px 32px #fffff9;
-    margin: 0 0 0 1.25rem;
 }
 
 .btn{
@@ -58,15 +69,11 @@ display: grid;
 }
 #F-L{
     border-radius: 5px 5px 5px 5px;  
-   
-    font-family:'Fredoka One', cursive;
-    
+    font-family:'Fredoka One', cursive;   
 }
 #M-Z{
     border-radius: 5px 15px 0px 5px;  
-  
-    font-family:'Fredoka One', cursive;
-    
+    font-family:'Fredoka One', cursive;   
 }
 #tutti{
     border-radius: 0 0 15px 15px;
@@ -75,8 +82,7 @@ display: grid;
 
     border:0;
     font-family:'Fredoka One', cursive;
-    background: none;
-    ;    
+    background: none;  
 }
 
 #A-E:hover,#F-L:hover, #M-Z:hover, #tutti:hover {
@@ -90,8 +96,16 @@ display: grid;
                 -20px -20px 60px #fffff5
 }
 
-.container{
+/* .container{
     display: grid;
+} */
+
+.utenti{
+    min-width: 300px;
+    width: 25%;
+    padding: 2rem 1.5rem;
+
+
 }
 
 article{ 
@@ -109,9 +123,11 @@ article img{
 }
 
 footer{
+
     display: flex;
     font-size: medium;
-    font-weight: 300;
+    font-weight: 400;
+    color: #992632;
     gap: 15px;
 
     justify-content: center;
@@ -121,4 +137,5 @@ footer img{
     padding: 10px 0;
     height: 20px;
     width: 20px;
+   
 }
