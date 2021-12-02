@@ -22,6 +22,7 @@ const disegnaTutto = (listaUtenti) => {
         <p>${user.website}</p>
         <p>${user.company}</p>
         </article>
+        
         `;
 
 
