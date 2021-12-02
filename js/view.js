@@ -14,22 +14,39 @@ const disegnaTutto = (listaUtenti) => {
         schede = schede+ //schede=+
         `
         <article>
-        <h2><img src="graph/Risorsa 2.svg">${user.username}</h2>
+        <h2>${user.username}</h2>
         <h4>${user.name}</h4>
-        <p><img src="graph/Risorsa 2.svg">${user.email}</p>
-        <p>${user.address.city}</p>
+        <p>${user.email}</p>
+        <button class="btnAddress"><strong>address</strong></button>
         <p>${user.phone}</p>
         <p>${user.website}</p>
-        <p>${user.company}</p>
+        <button class="btnGeo"><strong>geo</strong></button>
         </article>
         
         `;
 
 
+
+        
     }
+    // const btnAddress= document.querySelector(".btnAddress");
+
+    // btnAddress.addEventListener('click', (event)=>{
+    //     console.log(event.target)
+
+    //     document.innerHTML=
+    
+    //     `
+    //     <div class="address">
+    //     <p>${user.address.city}</p>
+    //     </div>
+    //     `
+
+    // })
 
     render(container, schede);
 };
+
 
 
 export{disegnaTutto};

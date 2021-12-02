@@ -15,27 +15,27 @@ main{
     min-height: 500px;
     max-width: 500px;
     justify-items: center;
-    
+    /* margin: 2rem 0 ; */
    
    
 }
-/* H1{
+H1{
     font-size: 4.2rem;
     font-family: 'Fredoka One', cursive;
     padding: 0 0 0 0.5rem;
     margin: 2rem 0 1rem 0;
     
-    background:-webkit-linear-gradient(145deg, #bb9d6f, #ddc7a3);
+    background:-webkit-linear-gradient(145deg, #d1b58b, #ddc7a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-} */
-
-.h1{
-   width: 20rem;
-   padding: 5rem 0 0 0;
-   /* margin: 3rem 0 2rem 0; */
-   justify-content:center ;
 }
+
+/* h1{
+   width: 20rem;
+   /* padding: 5rem 0 0 0; */
+ 
+   /* justify-content:center ;
+} */
 
 .header{
 border-radius: 25px;   
@@ -43,12 +43,16 @@ margin: 2rem 0 5rem 0;
 
 display: grid;
     width: 100%;
-    height: 3rem;
+    height: 3.2rem;
     grid-template-rows: 1fr 1fr;
 
     background: linear-gradient(145deg, #ffffe4, #e6d7c0);
-    box-shadow:  13px 13px 32px #d4c6b1,
-             -13px -13px 32px #fffff9;
+    box-shadow:  13px 13px 32px #bdb09d,
+             -13px -13px 32px #fffee3;
+
+    background:#b19b7b;
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
 }
 
 .btn{
@@ -78,7 +82,6 @@ display: grid;
     border-radius: 0 0 15px 15px;
     width: 100%;
     
-
     border:0;
     font-family:'Fredoka One', cursive;
     font-size:1.2rem ;
@@ -87,13 +90,20 @@ display: grid;
 }
 
 #A-E:hover,#F-L:hover, #M-Z:hover, #tutti:hover {
+    
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #726045; 
+
+    
     background: linear-gradient(145deg, #ffffe4, #e6d7c0);
-    box-shadow:  20px 20px 60px #d9cbb5,
-                 -20px -20px 60px #fffff5
+
+    box-shadow:  20px 20px 60px #bdb09d,
+    -20px -20px 60px #fffff5;  
 }
+
 #A-E:active,#F-L:active,#M-Z:active,#tutti:active{
     background: linear-gradient(145deg, #e6d7c0, #ffffe4);
-    box-shadow:  20px 20px 60px #d9cbb5,
+    box-shadow:  20px 20px 60px #bdb09d,
                 -20px -20px 60px #fffff5
 }
 
@@ -108,14 +118,26 @@ article{
     padding: 5px 25px;
     margin: 25px 0;
     border-radius: 25px;
+   
   
-    background: radial-gradient(90deg, #ffffe4, #e6d7c0);
-    box-shadow:  13px 13px 32px #d4c6b1,
-                          -13px -13px 32px #fffff9;}
+    background: radial-gradient(90deg, #f6e6cd, #e6d7c0);
+    box-shadow:  13px 13px 32px #bdb09d,
+                          -13px -13px 32px #fffee3;}
 
 article img{
     height: 1rem;
     width: 1rem;
+}
+article button{
+    padding: 0.25rem 1rem;
+    border: none;
+    color: #8a785e;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #f6e6cd, #cfc2ad);
+    box-shadow:  6px 6px 11px #bdb09d,
+                 -6px -6px 11px #fffee3;}
+.btnGeo{
+    margin: 0 0 1rem 0;
 }
 
 footer{
@@ -132,7 +154,6 @@ footer{
     align-items: center;
 }
 hr{
-    
     color: #992632;
 }
 
