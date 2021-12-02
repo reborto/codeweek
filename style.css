@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+/*font-family: 'Fredoka One', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/*font-family: 'Lato', sans-serif;*/
+
+body{
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(145deg, #e6d7c0, #ffffe4);
+}
+
+H1{
+    font-size: 4.2rem;
+    font-family: 'Fredoka One', cursive;
+    padding: 0 0 0 0.5rem;
+    margin: 0 0 1rem 0;
+    
+    background:-webkit-linear-gradient(145deg, #bb9d6f, #ddc7a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .h1{
+   
+} */
+
+.header{
+border-radius: 25px;   
+ 
+display: grid;
+    width: 230px;
+    grid-template-rows: 1fr 1fr;
+
+    background: linear-gradient(145deg, #ffffe4, #e6d7c0);
+    box-shadow:  13px 13px 32px #d4c6b1,
+             -13px -13px 32px #fffff9;
+    margin: 0 0 0 1.25rem;
+}
+
+.btn{
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    
+
+}
+.btn button{
+    border-radius: 25px; 
+    width: 100%;
+    border:none;
+    background: none;
+}
+
+#A-E{
+    border-radius: 15px 5px 5px 0;
+    /* border-top:solid; */
+    /* border-left: solid; */
+    font-family:'Fredoka One', cursive;
+}
+#F-L{
+    border-radius: 5px 5px 5px 5px;  
+   
+    font-family:'Fredoka One', cursive;
+    
+}
+#M-Z{
+    border-radius: 5px 15px 0px 5px;  
+  
+    font-family:'Fredoka One', cursive;
+    
+}
+#tutti{
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    
+
+    border:0;
+    font-family:'Fredoka One', cursive;
+    background: none;
+    ;    
+}
+
+#A-E:hover,#F-L:hover, #M-Z:hover, #tutti:hover {
+    background: linear-gradient(145deg, #ffffe4, #e6d7c0);
+    box-shadow:  20px 20px 60px #d9cbb5,
+                 -20px -20px 60px #fffff5
+}
+#A-E:active,#F-L:active,#M-Z:active,#tutti:active{
+    background: linear-gradient(145deg, #e6d7c0, #ffffe4);
+    box-shadow:  20px 20px 60px #d9cbb5,
+                -20px -20px 60px #fffff5
+}
+
+.container{
+    display: grid;
+}
+
+article{ 
+    padding: 5px 25px;
+    margin: 25px 0;
+    border-radius: 25px;
+  
+    background: radial-gradient(90deg, #ffffe4, #e6d7c0);
+    box-shadow:  13px 13px 32px #d4c6b1,
+                          -13px -13px 32px #fffff9;}
+
+article img{
+    height: 1rem;
+    width: 1rem;
+}
+
+footer{
+    display: flex;
+    font-size: medium;
+    font-weight: 300;
+    gap: 15px;
+
+    justify-content: center;
+    align-items: center;
+}
+footer img{
+    padding: 10px 0;
+    height: 20px;
+    width: 20px;
+}
