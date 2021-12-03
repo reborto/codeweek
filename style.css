@@ -24,10 +24,17 @@ H1{
     font-family: 'Fredoka One', cursive;
     padding: 0 0 0 0.5rem;
     margin: 2rem 0 1rem 0;
-    
-    background:-webkit-linear-gradient(145deg, #d1b58b, #ddc7a3);
+   
+    background-color: #d1b58b;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+       -moz-background-clip: text;
+            background-clip: text;
+
+    /* background:-webkit-linear-gradient(145deg, #d1b58b, #ddc7a3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
 }
 
 /* h1{

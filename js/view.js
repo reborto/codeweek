@@ -12,42 +12,30 @@ const disegnaTutto = (listaUtenti) => {
         // console.log(user); 
         
         schede = schede+ //schede=+
-        `
+         `
         <article>
         <h2>${user.username}</h2>
         <h4>${user.name}</h4>
         <p>${user.email}</p>
-        <button class="btnAddress"><strong>address</strong></button>
+
+        <button id="btnAddress" link="${user.address.street}"><strong>address</strong></button>
+        <div id="openAddress"></div>
+
         <p>${user.phone}</p>
         <p>${user.website}</p>
-        <button class="btnGeo"><strong>geo</strong></button>
+        <button class="btnGeo"><strong>company</strong></button>
         </article>
         
         `;
-
-
-
         
     }
-    // const btnAddress= document.querySelector(".btnAddress");
-
-    // btnAddress.addEventListener('click', (event)=>{
-    //     console.log(event.target)
-
-    //     document.innerHTML=
-    
-    //     `
-    //     <div class="address">
-    //     <p>${user.address.city}</p>
-    //     </div>
-    //     `
-
-    // })
-
     render(container, schede);
+    
+    return schede;
 };
 
-
+const btnAddress= document.getElementById("btnAddress")
+console.log(btnAddress)
 
 export{disegnaTutto};
 
