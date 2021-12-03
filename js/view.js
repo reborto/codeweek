@@ -16,13 +16,13 @@ const disegnaTutto = (listaUtenti) => {
         <article>
         <h2>${user.username}</h2>
         <h4>${user.name}</h4>
-        <p>${user.email}</p>
+        <p><a><strong>e </strong></a>${user.email}</p>
 
         <button id="btnAddress" link="${user.address.street}"><strong>address</strong></button>
         <div id="openAddress"></div>
 
-        <p>${user.phone}</p>
-        <p>${user.website}</p>
+        <p><a><strong>ph </strong></a>${user.phone}</p>
+        <p><a><strong>w </strong></a>${user.website}</p>
         <button class="btnGeo"><strong>company</strong></button>
         </article>
         

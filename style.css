@@ -96,7 +96,7 @@ display: grid;
     background: none;  
 }
 
-#A-E:hover,#F-L:hover, #M-Z:hover, #tutti:hover {
+#A-E:hover,#F-L:hover, #M-Z:hover{
     
     -webkit-background-clip: text;
     -webkit-text-fill-color: #726045; 
@@ -104,8 +104,18 @@ display: grid;
     
     background: linear-gradient(145deg, #ffffe4, #e6d7c0);
 
-    box-shadow:  20px 20px 60px #bdb09d,
-    -20px -20px 60px #fffff5;  
+    box-shadow:  20px 20px 30px #bdb09d,
+    -20px -20px 30px #fffff5;  
+}
+#tutti:hover{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #726045; 
+
+    
+    background: linear-gradient(145deg, #ffffe4, #e6d7c0);
+
+    box-shadow:  20px 20px 30px #bdb09d,
+    20px 20px 30px #fffff5;  
 }
 
 #A-E:active,#F-L:active,#M-Z:active,#tutti:active{
@@ -130,11 +140,36 @@ article{
     background: radial-gradient(90deg, #f6e6cd, #e6d7c0);
     box-shadow:  13px 13px 32px #bdb09d,
                           -13px -13px 32px #fffee3;}
+article h2{
+    font-family: 'Fredoka One', cursive;
+    
+    margin: 1rem 0 0 0;
 
-article img{
+    background-color: #d1b58b;
+    
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+article h4{
+    font-family: 'Fredoka One', cursive;
+    margin: 0 0 1rem 0;
+}
+article a{
+    background-color: #d1b58b;
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.5);
+    -webkit-background-clip: text;
+       -moz-background-clip: text;
+            background-clip: text;
+}
+
+/* article img{
     height: 1rem;
     width: 1rem;
-}
+} */
 article button{
     padding: 0.25rem 1rem;
     border: none;
